@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vansh Tanwani</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color: #fcd5cd;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .navBar{
+                margin: 0;
+                padding: 0;
+                width: 26.3vh;
+                background-color: #FFC1B5;
+                position: fixed;
+                height: 100%;
+                overflow: hidden;
+                scroll-behavior: none;
+            }
+            .navBar a {
+                display: block;
+                color: black;
+                padding: 2.5vh;
+                font-size: 3.8vh;
+                text-decoration: none;
+            }
+            .navBar a:hover:not(.active) {
+                background-color: #7a5a53;
+                color: white;
+            }
+            .navBar p{
+                display: block;
+                padding: 0.8vh;
+                font-size: 3.5vh;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .navBar img{
+                width: 26.3vh;
+                height: 26.3vh;
+            }
+            .topnav {
+                background-color:#FFC1B5;
+                overflow: hidden;
+                margin-left: 26.3vh;
+                position:relative;
+                height: auto;
+            }
+            .topnav a {
+                float: left;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 2.1vh 2.4vh;
+                text-decoration:none;
+                font-size: 3vh;
+                font-weight: bold;
+            }
+            .topnav a:hover {
+                background-color: #7a5a53;
+                color: white;
+            }
+            .topnav a.active {
+                background-color: black;
+                color: white;
+            }
+            .topnav .icon {
+                display: none;
+            }
+            .content {
+                margin-left: 26.3vh;
+                height: 92vh;
+                position: relative;
+                overflow: hidden;
+            }
+            #resume{
+                margin: auto;
+                height: 92vh;
+            }
+            #resume embed{
+                margin: auto;
+                width: 100vh;
+                height: 100vh;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navBar">
+            <img src="profile.jpeg" width="200px" height="200px"></image>
+            <p>Vansh <br>Tanwani</p>
+            <table>
+                <tr>
+                    <td><a href=""><i class="fa fa-linkedin" ></i></a></td>
+                    <td><a href=""><i class="fa fa-github" ></i></a></td>
+                    <td><a href=""><i class="fa fa-instagram" ></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="">Home</a>
+            <a href="">Eduation</a>
+            <a href="">Certifications</a>
+            <a href="">Projects</a>
+            <a href="" class="active">Resume</a>
+            <a href="">Contact Me</a>
+            <a href="javascript:void(0);" class="icon" onclick="onResize()"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="content">
+            <div id="resume">
+                <embed src="VanshTanwaniResume.pdf">
+            </div>
+        </div>
+    </body>
+</html>
