@@ -5,7 +5,6 @@
         <title>Vansh Tanwani</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            *{margin:0; padding:0}
             body{
                 background-color: #fcd5cd;
                 height: 100%;
@@ -23,7 +22,7 @@
                 overflow: hidden;
                 scroll-behavior: none;
             }
-            .navBar a {
+            .icons{
                 display: block;
                 color: black;
                 padding: 2.5vh;
@@ -39,7 +38,9 @@
                 padding: 0.8vh;
                 font-size: 3.5vh;
                 text-decoration: none;
+                position: relative;
                 font-weight: bold;
+                max-width: fit-content;
             }
             .navBar img{
                 width: 26.3vh;
@@ -52,26 +53,26 @@
                     position: relative;
                 }
                 .navBar img{
-                    height: 26.3vh;
-                    width: 26.3vh;
-                    border-radius: 00%;
+                    height: 20vh;
+                    width: 20vh;
                     float: right;
                 }
-                .navBar a {
-                    float: left;
+                .icons{
+                    text-align: center;
                 }
                 div.content {
                     margin-left: 0;
+                    overflow: visible;
                 }
             }
             @media screen and (max-width: 60.9vh) {
-                .navBar a {
+                .icons{
                     text-align: center;
                     float: none;
                 }
                 .navBar img{
-                    height: 26.3vh;
-                    width: 26.3vh;
+                    height: 16.5vh;
+                    width: 18.5vh;
                     float: right;
                 }
             }
@@ -170,12 +171,82 @@
             .content {
                 margin-left: 26.3vh;
                 height: 92vh;
-                position: relative;
                 overflow: hidden;
+                position: relative;
+            }
+            #contact{
+                height: auto;
+                width: 100%;
+                position:relative;
+                overflow: auto;
+            }
+            .userContact{
+                width: 80vh;
+                height: 85vh;
+                position:relative;
+                margin: auto;
+                background-color: #ffe7e2;
+                border-radius: 10%;
+            }
+            #contact h1{
+                padding: 1vh;
+                font-size: 5.5vh;
+                text-overflow: auto;
+                text-align: center;
+                color: #9c5f5f;
+            }
+            #contact a{
+                display: block;
+                text-align: center;
+                padding: 2.1vh 2.4vh;
+                text-decoration:none;
+                font-size: 3vh;
+                font-weight: bold;
+                color: #9c5f5f;
+            }
+            #contact i{
+                font-size: 5vh;
+                color: black;
+                
+            }
+            #name,#contactNumber{
+                width: 60vh;
+                height: 6vh;
+                margin-left: 10vh;
+                display: block;
+                font-size: 2.3vh;
+            }
+            #remarks{
+                width: 60vh;
+                height: 15vh;
+                margin-left: 10vh;
+                display: block;
+                font-size: 2.3vh;
+            }
+            .contactLable{
+                font-size: 3vh;
+                padding: 1.5vh;
+                display: block;
+                color: #9c5f5f;
+            }
+            #contactButton{
+                width: auto;
+                height: auto;
+                font-size: 3vh;
+                display: block;
+                text-align: center;
+                margin: auto;
+                padding: 2.3vh;
+                text-decoration: none;
+                background-color: #9c5f5f;
+                color: white;
+                border-radius: 35%;
+                border-color: #9c5f5f;
             }
             #resume{
                 margin: auto;
                 height: 92vh;
+                display: none;
             }
             #resume embed{
                 margin: auto;
@@ -198,27 +269,43 @@
     <body>
         <div class="navBar">
             <img src="profile.jpeg" width="200px" height="200px"></image>
-            <p>Vansh <br>Tanwani</p>
-            <table>
-                <tr>
-                    <td><a href=""><i class="fa fa-linkedin" ></i></a></td>
-                    <td><a href=""><i class="fa fa-github" ></i></a></td>
-                    <td><a href=""><i class="fa fa-instagram" ></i></a></td>
-                </tr>
-            </table>
+            <div class="name">
+                <p>Vansh <br>Tanwani</p>
+            </div>
         </div>
         <div class="topnav" id="myTopnav">
             <a href="">Home</a>
             <a href="">Eduation</a>
             <a href="">Certifications</a>
             <a href="">Projects</a>
-            <a href="" class="active">Resume</a>
-            <a href="">Contact Me</a>
+            <a href="">Resume</a>
+            <a href="" class="active">Contact Me</a>
             <a href="javascript:void(0);" class="icon" onclick="onResize()"><i class="fa fa-bars"></i></a>
         </div>
         <div class="content">
             <div id="resume">
                 <embed src="VanshTanwaniResume.pdf">
+            </div>
+            <div id="contact">
+                <div class="userContact">
+                    <h1>Write Me a Message</h1>
+                    <hr style="border: 1px solid #fcd5cd;">
+                    <form id="ContactForm">
+                        <label class="contactLable">Name</label>
+                        <br>
+                        <input type="text" placeholder="Enter Name" id="name">
+                        <br>
+                        <label class="contactLable">Contact Number</label>
+                        <br>
+                        <input type="number" placeholder="Enter Contact Number" maxlength="10" minlength="10" id="contactNumber">
+                        <br>
+                        <label class="contactLable">Remarks</label>
+                        <br>
+                        <textarea rows="4" cols="50" id="remarks" name="Remarks" placeholder="Enter Remarks"></textarea>
+                        <br>
+                        <button id="contactButton">Contact</button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
