@@ -64,6 +64,15 @@
                     margin-left: 0;
                     overflow: visible;
                 }
+                .myContact{
+                    width:max-content;
+                    float: left;
+                    position:relative;
+                    margin: auto;
+                }
+                .navBar hr{
+                    display: none;
+                }
             }
             @media screen and (max-width: 60.9vh) {
                 .icons{
@@ -74,6 +83,11 @@
                     height: 16.5vh;
                     width: 18.5vh;
                     float: right;
+                }
+                .myContact{
+                    background-color: aqua;
+                    width: fit-content;
+                    position: relative;
                 }
             }
             .topnav {
@@ -171,13 +185,14 @@
             .content {
                 margin-left: 26.3vh;
                 height: 92vh;
-                overflow: hidden;
+                overflow: auto;
                 position: relative;
             }
             #contact{
                 height: auto;
                 width: 100%;
                 position:relative;
+                display: none;
                 overflow: auto;
             }
             .userContact{
@@ -187,6 +202,25 @@
                 margin: auto;
                 background-color: #ffe7e2;
                 border-radius: 10%;
+            }
+            .myContact{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                display: none;
+                position: relative;
+            }
+            .conTable{
+                margin: auto;
+            }
+            #conIcons{
+                font-size: 25px;
+            }
+            .conA{
+                font-size: 2vh;
+                padding: auto;
+                display: block;
+                color: black;
             }
             #contact h1{
                 padding: 1vh;
@@ -254,6 +288,46 @@
                 height: 100vh;
                 display: block;
             }
+            .projectPanel{
+                margin: auto;
+                width: 135vh;
+                position: relative;
+                background-color: #ffe7e2;
+                padding:2vh;
+                padding-bottom: 10vh ;
+                margin: 2vh;
+                border-radius: 15px 50px 30px;
+            }
+            .projectImage{
+                width: auto;
+                margin-left: 45%;
+                margin-top: 2%;
+                position: relative;
+                height: 35vh;
+                border-radius: 50px;
+            }
+            .projectPanel h1{
+                font-size: 6vh;
+            }
+            .projectPanel p{
+                font-size: 3vh;
+            }
+            .projectPanel div{
+                width: 30%;
+                position: absolute;
+            }
+            .projectPanel a{
+                display: block;
+                padding: 2.1vh 2.4vh;
+                text-decoration:none;
+                font-size: 3vh;
+                font-weight: bold;
+                color: #9c5f5f;
+            }
+            .projectPanel a:hover:not(.active) {
+                background-color: #7a5a53;
+                color: white;
+            }
         </style>
         <script>
             function onResize(){
@@ -272,14 +346,30 @@
             <div class="name">
                 <p>Vansh <br>Tanwani</p>
             </div>
+            <hr style="border: 1px solid #fcd5cd;">
+            <div class="myContact">
+                <p>Contact</p>
+                <hr style="border: 1px solid #fcd5cd;">
+                    <i class="fa fa-phone" id="conIcons"></i>
+                    <a href="tel:+918319832790" class="conA">+91-8319832790</a>
+                    <i class="fa fa-envelope" id="conIcons"></i>
+                    <a href="mailto:vanshtanwani.vt@gmail.com" class="conA">vanshtanwani.vt@gmail.com</a>
+            </div>
+            <table class="conTable">
+                <tr>
+                    <td><a href="" class="icons"><i class="fa fa-linkedin" ></i></a></td>
+                    <td><a href="" class="icons"><i class="fa fa-github" ></i></a></td>
+                    <td><a href="" class="icons"><i class="fa fa-instagram" ></i></a></td>
+                </tr>
+            </table>
         </div>
         <div class="topnav" id="myTopnav">
             <a href="">Home</a>
             <a href="">Eduation</a>
             <a href="">Certifications</a>
-            <a href="">Projects</a>
+            <a href="" class="active">Projects</a>
             <a href="">Resume</a>
-            <a href="" class="active">Contact Me</a>
+            <a href="">Contact Me</a>
             <a href="javascript:void(0);" class="icon" onclick="onResize()"><i class="fa fa-bars"></i></a>
         </div>
         <div class="content">
@@ -305,6 +395,37 @@
                         <br>
                         <button id="contactButton">Contact</button>
                     </form>
+                </div>
+            </div>
+            <div id="projects">
+                <div class="projectPanel">
+                    <div>
+                        <h1>Space Traveller</h1>
+                        <p>It is a 2d endless runner game which is developed using <b>Unity Engine.</b><br> This game is created from scratch, even 
+                        all assets used are self created.</p>
+                        <a href="https://github.com/vansh09122003/Space-Traveller">Project Link  <i class="fa fa-github" ></i></a>
+                    </div>
+                    <img src="SpaceTraveller.png" class="projectImage">
+                </div>
+                <div class="projectPanel">
+                    <div>
+                        <h1>Tetris</h1>
+                        <p>It is my own version of nes Tetris.<br>Completely build from scratch, all assets are self made.</p>
+                        <a href="https://github.com/vansh09122003/Tetris">Project Link  <i class="fa fa-github" ></i></a>
+                    </div>
+                    <video autoplay muted loop class="projectImage">
+                        <source src="Tetris.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="projectPanel">
+                    <div>
+                        <h1>Car Rush</h1>
+                        <p>It is a endless runner game develped using <b>Unity Engine.</b><br>This project was made in group of 5 as college 
+                            project.<br>In this project we explored <b>ML-Agents</b> Unity
+                            Package.</p>
+                        <a href="https://github.com/vansh09122003/Car-Rush">Project Link  <i class="fa fa-github" ></i></a>
+                    </div>
+                    <img src="CarRush.png" class="projectImage">
                 </div>
             </div>
         </div>
