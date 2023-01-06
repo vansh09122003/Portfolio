@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,7 +88,7 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        
+        display: none;
         height: 100%;
         width:100%;
       }
@@ -213,6 +213,75 @@
         float: right;
         margin-right: 10rem;
       }
+      .contactMe{
+        display: flex;
+        color: rgb(61, 12, 71);
+      }
+      .contactMe hr{
+        border-color: rgba(61, 12, 71, 0.2); 
+      }
+      .userContact{
+        font-size: 1.4rem;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+      }
+      .userContact form{
+        text-align: left;
+      }
+      .contactLable{
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      .userContact input, #remarks{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        margin-top: 0.75rem;
+        display: block;
+      }
+      #contactButton{
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 50px;
+        color: rgb(61, 12, 71);
+        background-color: rgba(61, 12, 71, 0.2); 
+        border-color: rgba(31, 0, 37, 0.64); ;
+      }
+      #contactButton:hover{
+        background-color: rgb(61, 12, 71);
+        color: white;
+      }
+      .myContact{
+        font-size: 1.4rem;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      #conIcons{
+        font-size: 2rem;
+      }
+      .myContact a{
+        font-size: 2rem;
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-decoration: none;
+        padding: 1rem;
+        text-align: center;
+        color: rgb(61, 12, 71);
+        border-radius: 50px;
+      }
+      .icons i{
+        font-size: 4rem;
+      }
+      .myContact a:hover{
+        background-color: rgb(61, 12, 71);
+        color: white;
+      }
+      .socialIcon{
+        margin: auto;
+      }
     </style>
     <script>
       function disableDisplay(){
@@ -256,11 +325,11 @@
     <div class="body">
       <div class="header">
         <div class="topnav" id="myTopnav">
-          <a href="#home" onclick="onHome()" id="homeNav" class="active">Home</a>
+          <a href="#home" onclick="onHome()" id="homeNav">Home</a>
           <a href="#aboutMe" onclick="onAboutMe()" id="aboutNav">About Me</a>
           <a href="#education" onclick="onEducation()" id="educationNav">Education</a>
           <a href="" onclick="" id="projectNav">Projects</a>
-          <a href="" onclick="" id="contactNav">Contact Me</a>
+          <a href="" onclick="" id="contactNav" class="active">Contact Me</a>
         </div>
       </div>
       <div class="content">
@@ -310,6 +379,45 @@
               <a>HTML</a><a class="rightSkill">.NET</a>
               <br>
               <a>JavaScript</a><a class="rightSkill">CSS</a>
+            </div>
+          </div>
+        </div>
+        <div class="contactMe" id="ContactME">
+            <div class="userContact">
+              <h1>Write Me a Message</h1>
+              <form id="ContactForm">
+                <label class="contactLable">Name</label>
+                <br>
+                <input type="text" placeholder="Enter Name" id="name">
+                <br>
+                <label class="contactLable">Contact Number</label>
+                <br>
+                <input type="number" placeholder="Enter Contact Number" maxlength="10" minlength="10" id="contactNumber">
+                <br>
+                <label class="contactLable">Remarks</label>
+                <br>
+                <textarea rows="4" cols="50" id="remarks" name="Remarks" placeholder="Enter Remarks"></textarea>
+                <br>
+              </form>
+              <button id="contactButton">Contact</button>
+            </div>
+            <hr>
+            <div class="myContact">
+              <h1>Contact Me</h1>
+              <i class="fa fa-phone" id="conIcons"></i>
+              <br>
+              <a href="tel:+918319832790" class="conA">+91-8319832790</a>
+              <br>
+              <i class="fa fa-envelope" id="conIcons"></i>
+              <br>
+              <a href="mailto:vanshtanwani.vt@gmail.com" class="conA">vanshtanwani.vt@gmail.com</a>
+              <table class="socialIcon">
+                <tr>
+                  <td><a href="" class="icons"><i class="fa fa-linkedin" ></i></a></td>
+                  <td><a href="" class="icons"><i class="fa fa-github" ></i></a></td>
+                  <td><a href="" class="icons"><i class="fa fa-instagram" ></i></a></td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
