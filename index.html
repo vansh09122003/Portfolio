@@ -32,6 +32,12 @@
         0%{height: 0; opacity: 0;};
         100%{height: 100%; opacity: 100%;};
       }
+      @keyframes Resume{
+        from{opacity: 0;}
+      }
+      @keyframes Contact{
+        from{opacity: 0;}
+      }
 
       html{
         height: 100%;
@@ -88,7 +94,7 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        display: none;
+        display: block;
         height: 100%;
         width:100%;
       }
@@ -213,9 +219,68 @@
         float: right;
         margin-right: 10rem;
       }
-      .contactMe{
+      .resume{
+        display: none;
+        flex-direction: column;
+        font-size: 1.3rem;
+        background-color: rgba(61, 12, 71, 0.2); 
+        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        border-radius: 50px;
+        color: rgb(61, 12, 71); ;
+        animation-name: Resume;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out; 
+      }
+      .resumeHead{
         display: flex;
+      }
+      .resumeHead div{
+        width: 100%;
+      }
+      .resumeHead .nameDiv{
+        text-align: left;
+      }
+      .resumeHead .contactDiv{
+        text-align: right;
+      }
+      .resumeHead h1,.resumeHead h2{
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .resumeBody .resumeBodyCard{
+        display: flex;
+      }
+      .resumeBody .resumeBodyCard .title{
+        width:30%;
+      }
+      .resumeBody .resumeBodyCard .body{
+        width: 70%;
+        text-align: left;
+      }
+      .resume a{
+        width: fit-content;
+        text-decoration: none;
+        padding: 1rem;
         color: rgb(61, 12, 71);
+        border-radius: 50px;
+      }
+      .resume .resumeBody a{
+        background-color: rgba(61, 12, 71, 0.2);
+      }
+      .resume a:hover{
+        background-color: rgb(61, 12, 71);
+        color: white;
+      }
+      .downloadResume{
+        margin: auto;
+        background-color: rgba(61, 12, 71, 0.2);
+      }
+      .contactMe{
+        color: rgb(61, 12, 71);
+        display: none;
+        animation-name: Contact;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
       }
       .contactMe hr{
         border-color: rgba(61, 12, 71, 0.2); 
@@ -288,22 +353,31 @@
         var home=document.getElementById("home");
         var aboutMe=document.getElementById("aboutMe");
         var education=document.getElementById("education");
+        var resume=document.getElementById("resume");
+        var contact=document.getElementById("contactMe");
         var homeNav=document.getElementById("homeNav");
         var aboutNav=document.getElementById("aboutNav");
         var educationNav=document.getElementById("educationNav");
+        var resumeNav=document.getElementById("resumeNav");
+        var contactNav=document.getElementById("contactNav");
         home.style.display="none";
         aboutMe.style.display="none";
         education.style.display="none";
+        resume.style.display="none";
+        contact.style.display="none";
         homeNav.className="notActive";
         aboutNav.className="notActive";
         educationNav.className="notActive";
+        resumeNav.className="notActive";
+        contactNav.className="notActive";
       }
-      function onEducation(){
-        var education=document.getElementById("education");
-        var educationNav=document.getElementById("educationNav");
+
+      function onHome(){
+        var home=document.getElementById("home");
+        var homeNav=document.getElementById("homeNav");
         disableDisplay();
-        education.style.display="flex";
-        educationNav.className="active";
+        home.style.display="block";
+        homeNav.className="active";
       }
       function onAboutMe(){
         var aboutMe=document.getElementById("aboutMe");
@@ -312,12 +386,26 @@
         aboutMe.style.display="flex";
         aboutNav.className="active";
       }
-      function onHome(){
-        var home=document.getElementById("home");
-        var homeNav=document.getElementById("homeNav");
+      function onEducation(){
+        var education=document.getElementById("education");
+        var educationNav=document.getElementById("educationNav");
         disableDisplay();
-        home.style.display="block";
-        homeNav.className="active";
+        education.style.display="flex";
+        educationNav.className="active";
+      }
+      function onResume(){
+        var resume=document.getElementById("resume");
+        var resumeNav=document.getElementById("resumeNav");
+        disableDisplay();
+        resume.style.display="flex";
+        resumeNav.className="active";
+      }
+      function onContact(){
+        var contact=document.getElementById("contactMe");
+        var contactNav=document.getElementById("contactNav");
+        disableDisplay();
+        contact.style.display="flex";
+        contactNav.className="active";
       }
     </script>
   </head>
@@ -325,11 +413,12 @@
     <div class="body">
       <div class="header">
         <div class="topnav" id="myTopnav">
-          <a href="#home" onclick="onHome()" id="homeNav">Home</a>
+          <a href="#home" onclick="onHome()" id="homeNav" class="active">Home</a>
           <a href="#aboutMe" onclick="onAboutMe()" id="aboutNav">About Me</a>
           <a href="#education" onclick="onEducation()" id="educationNav">Education</a>
+          <a href="#resume" onclick="onResume()" id="resumeNav">Resume</a>
           <a href="" onclick="" id="projectNav">Projects</a>
-          <a href="" onclick="" id="contactNav" class="active">Contact Me</a>
+          <a href="#contact" onclick="onContact()" id="contactNav">Contact Me</a>
         </div>
       </div>
       <div class="content">
@@ -382,7 +471,109 @@
             </div>
           </div>
         </div>
-        <div class="contactMe" id="ContactME">
+        <div class="resume" id="resume">
+          <div class="resumeHead">
+            <div class="nameDiv">
+              <h1>Vansh Tanwani</h1>
+            </div>
+            <div class="contactDiv">
+              <h2><a href="mailto:vanshtanwani.vt@gmail.com">vanshtanwani.vt@gmail.com</a></h2>
+              <h2><a href="tel:+918319832790" >+91-8319832790</a></h2>
+              <h2>Bhopal</h2>
+            </div>
+          </div>
+          <div class="resumeBody">
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Education</h2>
+              </div>
+              <div class="body">
+                  <b>B.Tech, CSE with Specialization in Gaming Technology</b>VIT Bhopal University<br>2021-2025
+                  <br><br>
+                  <b>Senior Secondary(XII), Science</b>Mithi Gobindram Public School<br>(CBSE Board)<br>Year of Completion: 2021<br>Percentage: 90%
+                  <br><br>
+                  <b>Secondary(X)</b>Mithi Gobindram Public School<br>(CBSE Board)<br>Year of Completion: 2019<br>Percentage: 85%
+                  <br><br>
+              </div>
+            </div>
+            <hr>
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Internships</h2>
+              </div>
+              <div class="body">
+                <b>Unity Developer Intern</b>Todquest Enterprises<br> Noida<br>Nov 2022 - Dec 2022 <br>Worked on VR based project in Unity 3D
+                <br><br>
+              </div>
+            </div>
+            <hr>
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Roles and Responsiblities</h2>
+              </div>
+              <div class="body">
+                <br>
+                Team Leader in "Cafe Managment Syatem" and "Car Rush" group projects
+                <br><br>
+              </div>
+            </div>
+            <hr>
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Projects</h2>
+              </div>
+              <div class="body">
+                <br>
+                <b>Space Traveller</b><br><a href="https://github.com/vansh09122003/Space-Traveller"><i class="fa fa-github" > </i>GitHub Link</a><br>It is a 2d endless 
+                runner game which is developed using Unity Engine.<br> This game is created from scratch, even all assets used are self created.
+                <br><br>
+                <b>Tetris</b><br><a href="https://github.com/vansh09122003/Tetris"><i class="fa fa-github" > </i>GitHub Link</a><br>It is my own version of nes Tetris.
+                Completely build from scratch, all assets are self made.
+                <br><br>
+                <b>Tic Tac Tow</b><br><a href="https://github.com/vansh09122003/Tic-Tac-Toe"><i class="fa fa-github" > </i>GitHub Link</a>
+                <br>Tried to create Tic Tac Toe in 3D.
+                <br><br>
+                <b>Cafe Managment System</b><br><a href="https://github.com/vansh09122003/Cafe-Management-System-Python"><i class="fa fa-github" > </i>
+                GitHub Link</a><br>It is a console based application,designed in a group. This application has interface in both hindi and english.
+                <br><br>
+                <b>Car Rush</b><br><a href="https://github.com/vansh09122003/Car-Rush"><i class="fa fa-github" > </i>GitHub Link</a>
+                <br>It is a endless runner game develped using Unity Engine.This project was made in group of 5 as college project. 
+                In this project we explored ML-Agents Unity Package.
+                <br><br>
+              </div>
+            </div>
+            <hr>
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Skills</h2>
+              </div>
+              <div class="skill" style="animation: none;">
+                <a>Unity Engine</a><a class="rightSkill">Unity 3D</a>
+                <br>
+                <a>C#</a><a class="rightSkill">Python</a>
+                <br>
+                <a>Java</a><a class="rightSkill">C++</a>
+                <br>
+                <a>HTML</a><a class="rightSkill">.NET</a>
+                <br>
+                <a>JavaScript</a><a class="rightSkill">CSS</a>
+              </div>
+            </div>
+            <hr>
+            <div class="resumeBodyCard">
+              <div class="title">
+                <h2>Work Samples</h2>
+              </div>
+              <div class="body">
+                <br>
+                <a href="">Work Samples</a>
+                <br><br>
+              </div>
+            </div>
+          </div>
+          <a href="Assets/VanshTanwaniResume.pdf" class="downloadResume">Download Resume</a>
+        </div>
+        <div class="contactMe" id="contactMe">
             <div class="userContact">
               <h1>Write Me a Message</h1>
               <form id="ContactForm">
@@ -406,11 +597,11 @@
               <h1>Contact Me</h1>
               <i class="fa fa-phone" id="conIcons"></i>
               <br>
-              <a href="tel:+918319832790" class="conA">+91-8319832790</a>
+              <a href="tel:+918319832790">+91-8319832790</a>
               <br>
               <i class="fa fa-envelope" id="conIcons"></i>
               <br>
-              <a href="mailto:vanshtanwani.vt@gmail.com" class="conA">vanshtanwani.vt@gmail.com</a>
+              <a href="mailto:vanshtanwani.vt@gmail.com">vanshtanwani.vt@gmail.com</a>
               <table class="socialIcon">
                 <tr>
                   <td><a href="" class="icons"><i class="fa fa-linkedin" ></i></a></td>
