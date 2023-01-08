@@ -8,347 +8,49 @@
     <title>Vansh Tanwani</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fullsize.css">
     <style>
-      @keyframes homeDiv{
-        from{margin-top: -20rem;}
-        to{margin-top: 10rem;}
-      }
-      @keyframes homeImg{
-        from{opacity: 0%;}
-        to{opacity: 100%;}
-      }
-      @keyframes P1{
-        from{opacity: 0;}
-      }
-      @keyframes P2{
-        0%{opacity: 0;}
-        50%{opacity: 0;}
-        100%{opacity: 100%;}
-      }
-      @keyframes Acdemic{
-        from{height: 0; opacity: 0;};
-      }
-      @keyframes Skill{
-        0%{height: 0; opacity: 0;};
-        100%{height: 100%; opacity: 100%;};
-      }
-      @keyframes Resume{
-        from{opacity: 0;}
-      }
-      @keyframes Contact{
-        from{opacity: 0;}
-      }
-
-      html{
-        height: 100%;
-        width: 100%;
-      }
-      body{
-        text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-        background-color: rgb(189, 165, 194);
-        margin: 0;
-        min-height: 100%;
-      }
-      .body{
-        height: 100;
-        display:flex;
-        flex-direction: column;
-        text-align: center;
-      }
-      .header {
-        background-color:rgba(255, 255, 255, 0);
-        overflow: hidden;
-        height: fit-content;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        min-width: 100%;
-      }
-      .header a {
-        color: black;
-        text-align: center;
-        padding: 1em;
-        text-decoration:none;
-        font-size: 1.2em;
-        font-weight: bold;
-        color: rgba(61, 12, 71, 0.5);
-        border-bottom: .25rem solid transparent;
-        margin-left: auto;
-      }
-      .topnav a:hover, .topnav a:focus {
-        border-bottom-color: rgba(61, 12, 71, 0.25);
-      }
-      .topnav a.active{
-        color: rgb(61, 12, 71);
-        border-bottom-color: rgb(61, 12, 71);
-      }
-      .content{
-        width: 100%;
-        min-height: 32.045875em;
-        position: relative;
-      }
-      #home{
-        position: absolute;
-        max-width: 42em;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto; 
-        display: block;
-        height: 100%;
-        width:100%;
-      }
-      .profileImg{
-        width: 20rem; 
-        float: right;
-        animation-name: homeImg; 
-        animation-duration: 5s; 
-        animation-timing-function: ease-in-out; 
-        border-radius: 0px 0px 300px 300px;
-      }
-      .homeTxt{
-        animation-name: homeDiv;
-        animation-duration: 5s; 
-        animation-timing-function: ease-in-out; 
-        margin-top: 10rem; 
-        width: fit-content;
-      }
-      .nameCover{
-        text-align: left; 
-        color: rgba(61, 12, 71, 0.5);
-      }
-      .name{
-        text-align: left;
-        color: rgb(61, 12, 71);
-      }
-      .aboutBtn{
-        display: block;
-        font-weight: bold;
-        margin-top: 2rem; 
-        background-color: rgba(61, 12, 71, 0.2); 
-        font-size: medium;
-        padding: 1rem;
-        border-radius: 20px;
-        text-decoration:none;
-        width: fit-content;
-        margin-left: auto;
-        color: rgb(61, 12, 71);
-      }
-      .aboutBtn:hover{
-        background-color: rgb(61, 12, 71);
-        color: white;
-      }
-      .aboutMe{
-        display: none;
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-      }
-      .aboutMe h1{
-        color: rgb(61, 12, 71);
-      }
-      .aboutMe div{
-        padding: 3em;
-        text-align: left;
-      }
-      .aboutMe h2{
-        color: rgba(61, 12, 71, 0.5);
-      }
-      .aboutMe p{
-        font-size: 1.4rem;
-        color: rgb(50, 11, 59);
-      }
-      .P1{
-        animation-name: P1;
-        animation-duration: 2.5s; 
-        animation-timing-function: ease-in-out; 
-      }
-      .P2{
-        animation-name: P2;
-        animation-duration: 5s; 
-        animation-timing-function: ease-in-out; 
-      }
-      .aboutImg{
-        width: 25rem; 
-        float: right;
-        animation-name: homeImg; 
-        animation-duration: 5s; 
-        animation-timing-function: ease-in-out; 
-      }
-      .education{
-        font-size: 1.4rem;
-        display: none;
-      }
-      .acdemic{
-        width: 50%;
-        animation-name: Acdemic;
-        animation-duration: 5s; 
-        animation-timing-function: ease-in-out; 
-      }
-      .skill{
-        width: 50%;
-        animation-name: Skill;
-        animation-duration: 10s; 
-        animation-timing-function: ease-in-out; 
-      }
-      .acdemic h1,.skill h1{
-        color: rgb(61, 12, 71);
-      }
-      .acdemic ul{
-        text-align: left;
-        color: rgb(50, 11, 59);
-      }
-      .acdemic li{
-        padding: 1em;
-      }
-      .skill div{
-        text-align: left;
-      }
-      .skill a{
-        padding: 1rem;
-        display: block;
-        width: max-content;
-        margin-left: 10rem;
-        border-radius: 200px;
-        background-color: rgba(61, 12, 71, 0.2); 
-        color: rgb(61, 12, 71);
-      }
-      .skill a:hover{
-        background-color: rgb(61, 12, 71);
-        color: white;
-      }
-      .rightSkill{
-        float: right;
-        margin-right: 10rem;
-      }
-      .resume{
-        display: none;
-        flex-direction: column;
-        font-size: 1.3rem;
-        background-color: rgba(61, 12, 71, 0.2); 
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-        border-radius: 50px;
-        color: rgb(61, 12, 71); ;
-        animation-name: Resume;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out; 
-      }
-      .resumeHead{
-        display: flex;
-      }
-      .resumeHead div{
-        width: 100%;
-      }
-      .resumeHead .nameDiv{
-        text-align: left;
-      }
-      .resumeHead .contactDiv{
-        text-align: right;
-      }
-      .resumeHead h1,.resumeHead h2{
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-      .resumeBody .resumeBodyCard{
-        display: flex;
-      }
-      .resumeBody .resumeBodyCard .title{
-        width:30%;
-      }
-      .resumeBody .resumeBodyCard .body{
-        width: 70%;
-        text-align: left;
-      }
-      .resume a{
-        width: fit-content;
-        text-decoration: none;
-        padding: 1rem;
-        color: rgb(61, 12, 71);
-        border-radius: 50px;
-      }
-      .resume .resumeBody a{
-        background-color: rgba(61, 12, 71, 0.2);
-      }
-      .resume a:hover{
-        background-color: rgb(61, 12, 71);
-        color: white;
-      }
-      .downloadResume{
-        margin: auto;
-        background-color: rgba(61, 12, 71, 0.2);
-      }
-      .contactMe{
-        color: rgb(61, 12, 71);
-        display: none;
-        animation-name: Contact;
-        animation-duration: 5s;
-        animation-timing-function: ease-in-out;
-      }
-      .contactMe hr{
-        border-color: rgba(61, 12, 71, 0.2); 
-      }
-      .userContact{
-        font-size: 1.4rem;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-      }
-      .userContact form{
-        text-align: left;
-      }
-      .contactLable{
-        font-size: 2rem;
-        padding: 1rem;
-      }
-      .userContact input, #remarks{
-        font-size: 1.5rem;
-        margin-left: 2rem;
-        margin-top: 0.75rem;
-        display: block;
-      }
-      #contactButton{
-        font-size: 2rem;
-        padding: 1rem;
-        border-radius: 50px;
-        color: rgb(61, 12, 71);
-        background-color: rgba(61, 12, 71, 0.2); 
-        border-color: rgba(31, 0, 37, 0.64); ;
-      }
-      #contactButton:hover{
-        background-color: rgb(61, 12, 71);
-        color: white;
-      }
-      .myContact{
-        font-size: 1.4rem;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-      }
-      #conIcons{
-        font-size: 2rem;
-      }
-      .myContact a{
-        font-size: 2rem;
-        display: block;
-        width: fit-content;
-        margin: auto;
-        text-decoration: none;
-        padding: 1rem;
-        text-align: center;
-        color: rgb(61, 12, 71);
-        border-radius: 50px;
-      }
-      .icons i{
-        font-size: 4rem;
-      }
-      .myContact a:hover{
-        background-color: rgb(61, 12, 71);
-        color: white;
-      }
-      .socialIcon{
-        margin: auto;
+      @media screen and (max-width: 700px) {
+        .header{
+          text-align: left;
+        }
+        .notActive{
+          display: none;
+          position: relative;
+          float: left;
+        }
+        .header .headerBox{
+          padding: 0em;
+          padding-right: 1rem;
+          display:block;
+          float: right;
+        }
+        .header .expandBox a{
+          display: block;
+          width: 100%;
+        }
+        .header .expandBox a:hover,.header .expandBox a:focus {
+          border-bottom-color: rgba(61, 12, 71, 0.25);
+        }
+        .header .expandBox a.active{
+          color: rgb(61, 12, 71);
+          border-bottom-color: rgb(61, 12, 71);
+        }
       }
     </style>
     <script>
+      function onExpand(){
+        var expandBox=document.getElementById("expandBox");
+        var topNav=document.getElementById("myTopnav");
+        if(topNav.style.display!="none"){
+          topNav.style.display="none";
+          expandBox.style.display="block";
+        }
+        else{
+          topNav.style.display="block";
+          expandBox.style.display="none";
+        }
+      }
       function disableDisplay(){
         var home=document.getElementById("home");
         var aboutMe=document.getElementById("aboutMe");
@@ -371,7 +73,6 @@
         resumeNav.className="notActive";
         contactNav.className="notActive";
       }
-
       function onHome(){
         var home=document.getElementById("home");
         var homeNav=document.getElementById("homeNav");
@@ -412,13 +113,22 @@
   <body>
     <div class="body">
       <div class="header">
+        <a onclick="onExpand()" class="headerBox"><i class="fa fa-bars"></i></a>
         <div class="topnav" id="myTopnav">
           <a href="#home" onclick="onHome()" id="homeNav" class="active">Home</a>
-          <a href="#aboutMe" onclick="onAboutMe()" id="aboutNav">About Me</a>
-          <a href="#education" onclick="onEducation()" id="educationNav">Education</a>
-          <a href="#resume" onclick="onResume()" id="resumeNav">Resume</a>
-          <a href="" onclick="" id="projectNav">Projects</a>
-          <a href="#contact" onclick="onContact()" id="contactNav">Contact Me</a>
+          <a href="#aboutMe" onclick="onAboutMe()" id="aboutNav" class="notActive">About Me</a>
+          <a href="#education" onclick="onEducation()" id="educationNav" class="notActive">Education</a>
+          <a href="#resume" onclick="onResume()" id="resumeNav" class="notActive">Resume</a>
+          <a href="" onclick="" id="projectNav" class="notActive">Projects</a>
+          <a href="#contact" onclick="onContact()" id="contactNav" class="notActive">Contact Me</a>
+        </div>
+        <div class="expandBox" id="expandBox">
+          <a href="#home" onclick="onHome()" id="homeNav" class="active">Home</a>
+          <a href="#aboutMe" onclick="onAboutMe()" id="aboutNav" class="notActive">About Me</a>
+          <a href="#education" onclick="onEducation()" id="educationNav" class="notActive">Education</a>
+          <a href="#resume" onclick="onResume()" id="resumeNav" class="notActive">Resume</a>
+          <a href="" onclick="" id="projectNav" class="notActive">Projects</a>
+          <a href="#contact" onclick="onContact()" id="contactNav" class="notActive">Contact Me</a>
         </div>
       </div>
       <div class="content">
