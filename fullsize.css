@@ -300,6 +300,9 @@
     margin-top: 0.75rem;
     display: block;
   }
+  #remarks{
+    max-width: 40rem;
+  }
   #contactButton{
     font-size: 2rem;
     padding: 1rem;
